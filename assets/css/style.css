@@ -1,0 +1,167 @@
+/* GENERAL */
+
+html, h1, h2, h3, h4, h5, h6, p, div, section, header, footer {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #19232D;
+    height: 7vh;
+    max-height: 107px;
+}
+
+.header-logo {
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.header-title {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-left: 3rem;
+    color: #C9A059
+}
+
+/* SECTION - INTRO */
+
+.section-intro {
+    height: 93vh;
+    background-image: url('../img/enter-background2.jpg');
+    background-attachment: fixed;
+}
+
+.section-intro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.section-intro-card {
+    background-color: rgba(255,255,255,.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 586px;
+}
+
+.section-intro-card-title {
+    width: 100%;
+    text-align: left;
+    margin-left: 33px;
+    text-transform: uppercase;
+    color: #C9A059;
+    font-weight: bold;
+    font-size: 15px;
+    padding-bottom: 2rem;
+}
+
+.section-intro-card-image {
+    max-width: 526px;
+    height: 754px;
+    border-radius: 35%;
+}
+
+.section-intro-card-text {
+    margin-top: 28px;
+    color: #C9A059;
+    font-size: 20px;
+    text-shadow: 0px 3px 6px #00000029;
+}
+
+/* SECTION - CAROUSEL */
+
+.section-carousel {
+    height: 100vh;
+    background-color: #19232D;
+}
+
+
+
+/* SECTION - CONTACT */
+
+.section-contact {
+    height: 63vh;
+    background-color: #C9A059;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-contact-container {
+    background-color: white;
+    width: 1082px;
+    height: 832.5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-contact-title {
+    text-transform: uppercase;
+    font-size: 35px;
+    color: #C9A059;
+}
+
+.section-contact-text {
+    margin-top: 40px;
+    font-size: 20px;
+    width: 746px;
+    height: 77px;
+}
+
+.section-contact-forms-1 {
+    display: flex;
+    margin-bottom: 40px;
+    margin-top: 50px;
+}
+
+.section-contact-forms-1 input {
+    width: 250px
+}
+
+.section-contact-forms-1-name {
+    margin-right: 30px;
+}
+
+.section-contact-forms-2-textarea {
+    width: 538px;
+    margin-bottom: 50px;
+}
+
+.section-contact-forms-3 {
+    display: flex;
+    align-items: flex-start;
+    width: 538px;
+}
+
+.section-contact-button {
+    background-color: #C9A059;
+    border: 0;
+    width: 250px;
+    height: 48px;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* FOOTER */
+
+footer {
+    height: 37vh;
+    background-color: #19232D;
+}
