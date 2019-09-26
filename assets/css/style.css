@@ -1,9 +1,18 @@
 /* GENERAL */
 
+* {
+    box-sizing: border-box;
+  }
+
+
 html, h1, h2, h3, h4, h5, h6, p, div, section, header, footer {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     padding: 0;
     margin: 0;
+}
+
+img {
+    
 }
 
 
@@ -72,8 +81,7 @@ html {
 
 .section-intro-card-image {
     max-width: 526px;
-    height: 754px;
-    border-radius: 35%;
+    max-height: 754px;
 }
 
 .section-intro-card-text {
@@ -81,15 +89,52 @@ html {
     color: #C9A059;
     font-size: 20px;
     text-shadow: 0px 3px 6px #00000029;
+    max-width: 270px;
+    text-align: center;
 }
+
 
 /* SECTION - CAROUSEL */
 
 .section-carousel {
     height: 100vh;
+    width: 100%;
     background-color: #19232D;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
 }
 
+.card {
+    width: 20%;
+    height: 60%;
+    background: rgba(255,255,255,1);
+    border-radius: 27px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-middle {
+    margin-left: 6rem;
+    margin-right: 6rem;
+}
+
+.card-img {
+    height: 80%;
+    width: 80%;
+    position: absolute;
+    bottom: 40%;
+}
+
+.card-text {
+    margin-top: 90%;
+    font-size: 20px;
+    color: black;
+    text-align: left;
+    padding: 3rem;
+}
 
 
 /* SECTION - CONTACT */
@@ -164,4 +209,50 @@ html {
 footer {
     height: 37vh;
     background-color: #19232D;
+}
+
+@media (min-width: 320px) and (max-width: 640px) {
+
+}
+
+@media (min-width: 320px) and (max-width: 640px) {
+    html {
+        font-size: 1rem;
+    }
+
+    img {
+        max-width: 100%;
+    }
+    
+    .section-intro-card-image{
+        max-width: 80%;
+    } 
+
+    .section-intro-card-title, .section-intro-card-text {
+        font-size: 1rem;
+        width: 90%;
+        max-width: 100%;
+    }
+
+    .section-contact, .section-contact-container, .section-carousel ,.section-contact-text, .section-contact-forms-1 input, .section-contact-forms-2-textarea, .section-contact-forms-3, .section-contact-button {
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+    }
+
+    .section-carousel {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+        margin-top: 10rem;
+    }
+
+    .card-img {
+        max-width: 70%;
+        max-height: 70%;
+    }
+
 }

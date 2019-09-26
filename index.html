@@ -7,12 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/lib/slick/slick.css">
+    <link rel="stylesheet" href="assets/lib/slick/slick-theme.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>League of Legends</title>
 </head>
-<body>
 
+<body>
 
     <header>
         <div class="header-container">
@@ -34,28 +37,44 @@
 
 
     <section class="section-carousel">
-        <div class="section-carousel-container">
-
+            <div class="card">
+                <img class="card-img" src="assets/img/hero11.png">
+                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat culpa eos commodi
+                    doloribus enim maxime quidem nobis architecto qui velit odio obcaecati officia sequi harum.</p>
+            </div>
+            <div class="card card-middle">
+                <img class="card-img" src="assets/img/hero12.png" alt="" srcset="">
+                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat culpa eos commodi
+                    doloribus enim maxime quidem nobis architecto qui velit odio obcaecati officia sequi harum.</p>
+            </div>
+            <div class="card">
+                <img class="card-img" src="assets/img/hero13.png" alt="" srcset="">
+                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat culpa eos commodi
+                    doloribus enim maxime quidem nobis architecto qui velit odio obcaecati officia sequi harum.</p>
         </div>
+
+
     </section>
 
 
     <section class="section-contact">
         <div class="section-contact-container">
             <h3 class="section-contact-title">Formulário</h3>
-            <p class="section-contact-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            <p class="section-contact-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                 ex ea commodo consequat.</p>
             <div class="section-contact-forms-1">
-                    <input class="section-contact-forms-1-name" type="text" placeholder="Nome">
-                    <input class="section-contact-forms-1-email" type="email" placeholder="Email">
+                <input class="section-contact-forms-1-name" type="text" placeholder="Nome">
+                <input class="section-contact-forms-1-email" type="email" placeholder="Email">
             </div>
             <div class="section-contact-forms-2">
-                <textarea class="section-contact-forms-2-textarea" name="" id="" cols="30" rows="10" placeholder="Mensagem"></textarea>
+                <textarea class="section-contact-forms-2-textarea" name="" id="" cols="30" rows="10"
+                    placeholder="Mensagem"></textarea>
 
             </div>
             <div class="section-contact-forms-3">
-            <button class="section-contact-button" type="submit">Enviar</button>
+                <button class="section-contact-button" type="submit">Enviar</button>
             </div>
         </div>
         </div>
@@ -66,6 +85,19 @@
 
     </footer>
 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/lib/slick/slick.js"></script>
+    <script>
+        $(document).ready(function(){
+  console.log('teste')
+  $('.carousel').slick({
+  slidesToShow: 3,
+  dots:true,
+  centerMode: true,
+  });
+});
+    </script>
 </body>
 
 </html>
