@@ -181,6 +181,7 @@ html {
     background-color: white;
     width: 55.76%;
     height: 123%;
+    min-height: 781.75px;
     display: flex;
     flex-direction: column;
     justify-content: center;
