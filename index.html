@@ -16,7 +16,7 @@
 </head>
 
 <body>
-        <a href="#top" class="glyphicon glyphicon-chevron-up"></a>
+    <a href="#top" class="glyphicon glyphicon-chevron-up"></a>
     <header>
         <div class="header-container">
             <img class="header-logo" src="assets/img/logo.png" alt="">
@@ -91,8 +91,10 @@
                 ex ea commodo consequat.</p>
             <div class="section-contact-forms-1">
                 <form name="form" id="form">
-                <input id="form-name" class="section-contact-forms-1-name" name="nome" type="text" placeholder="Nome">
-                <input id="form-email" class="section-contact-forms-1-email" name="email" type="email" placeholder="Email">
+                    <input id="form-name" class="section-contact-forms-1-name" name="nome" type="text"
+                        placeholder="Nome">
+                    <input id="form-email" class="section-contact-forms-1-email" name="email" type="email"
+                        placeholder="Email">
             </div>
             <div class="section-contact-forms-2">
                 <textarea class="section-contact-forms-2-textarea" name="texto" id="form-text" cols="30" rows="10"
@@ -101,7 +103,7 @@
             </div>
             <div class="section-contact-forms-3">
                 <button class="section-contact-button" type="submit" name="enviar" id="enviar">Enviar</button>
-            </form>
+                </form>
             </div>
         </div>
         </div>
@@ -109,9 +111,9 @@
 
 
     <footer>
-            <a id="subirTopo">
-                    ^
-                  </a>
+        <a id="subirTopo">
+            ^
+        </a>
     </footer>
 
 
@@ -127,8 +129,7 @@
                 slidesToScroll: 1,
                 //   adaptiveHeight: true,
                 // dots:true,
-                responsive: [
-                    {
+                responsive: [{
                         breakpoint: 1200,
                         settings: {
                             centerMode: true,
@@ -149,82 +150,61 @@
     </script>
 
     <script type="text/javascript">
-      $(document).ready(function () {
+        $(document).ready(function () {
 
-        $("#form").submit(function(e){
-            return false;
-        })
-          $("#form").validate({
-              rules : {
-                email : {
-                    required: true,
-                    email: true
+            $("#form").submit(function (e) {
+                return false;
+            })
+            $("#form").validate({
+                rules: {
+                    email: {
+                        required: true,
+                        email: true,
+                        depends: function(){
+                                   $("#form-email").css("border","2px #C9A059 solid");
+                            }
+                    },
+                    nome: {
+                        required: true,
+                        depends: function(){
+                                   $("#form-name").css("border","2px #C9A059 solid");
+                            }
+                        
+                    },
+                    texto: {
+                        required: true,
+                    }
+
                 },
-                nome : {
-                    required: true,
+                submitHandler: function (form) {
+                    alert("Seu contato foi submetido !");
+
                 },
-                texto : {
-                    required: true,
-                }
-
-              },
-              submitHandler: function (form) {
-                alert("deu certo!");
-                form.submit();
-}
-
-
-              
-          })
-      });
+                
+            })
+        });
     </script>
 
     <script type="text/javascript">
-      $(document).ready(function () {
-          $("#form").validate({
-              rules : {
-                email : {
-                    required: true,
-                    email: true
-                },
-                nome : {
-                    required: true,
-                    maxlenght: 100,
-                    minlenght: 10,
-                },
-                texto : {
-                    required: true,
+        jQuery(document).ready(function () {
+
+            jQuery("#subirTopo").hide();
+
+            jQuery('a#subirTopo').click(function () {
+                jQuery('body,html').animate({
+                    scrollTop: 0
+                }, 200);
+                return false;
+            });
+
+            jQuery(window).scroll(function () {
+                if (jQuery(this).scrollTop() > 10) {
+                    jQuery('#subirTopo').fadeIn();
+                } else {
+                    jQuery('#subirTopo').fadeOut();
                 }
-
-              },
-              submitHandler: function(form){
-                  alert("sucesso")
-              }
-              
-          })
-      });
-    </script>
-
-<script type="text/javascript">
-    jQuery(document).ready(function(){
-    
-    jQuery("#subirTopo").hide();
-    
-    jQuery('a#subirTopo').click(function () {
-             jQuery('body,html').animate({
-               scrollTop: 0
-             }, 200);
-            return false;
-       });
-    
-    jQuery(window).scroll(function () {
-             if (jQuery(this).scrollTop() > 10) {
-                jQuery('#subirTopo').fadeIn();
-             } else {
-                jQuery('#subirTopo').fadeOut();
-             }
-         });
-    });
+            });
+        });
     </script>
 
 </body>

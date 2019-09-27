@@ -264,7 +264,9 @@ footer {
     opacity:1;
     }
 
-
+    #form-email-error, #form-name-error {
+        display: none !important;
+    }
 
 @media (max-width: 1230px) {
     .carousel, .slick-slider {
