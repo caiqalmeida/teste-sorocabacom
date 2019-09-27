@@ -194,20 +194,20 @@ html {
 }
 
 .section-contact-text {
-    margin-top: 40px;
-    font-size: 20px;
-    width: 746px;
-    height: 77px;
+    margin-top: 2.5rem;
+    font-size: 1.25rem;
+    width: 70.85%;
+    height: 10%;
 }
 
 .section-contact-forms-1 {
     display: flex;
-    margin-bottom: 40px;
-    margin-top: 50px;
+    margin-bottom: 2.5rem;
+    margin-top: 3rem;
 }
 
 .section-contact-forms-1 input {
-    width: 250px
+    width: 250px;
 }
 
 .section-contact-forms-1-name {
