@@ -42,8 +42,8 @@ html {
 }
 
 .header-logo {
-    max-width: 30px;
-    max-height: 30px;
+    height: 57%;
+    max-height: 40px;
 }
 
 .header-title {
