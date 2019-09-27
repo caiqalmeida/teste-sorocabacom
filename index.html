@@ -16,7 +16,7 @@
 </head>
 
 <body>
-
+        <a href="#top" class="glyphicon glyphicon-chevron-up"></a>
     <header>
         <div class="header-container">
             <img class="header-logo" src="assets/img/logo.png" alt="">
@@ -95,7 +95,7 @@
                 <input id="form-email" class="section-contact-forms-1-email" name="email" type="email" placeholder="Email">
             </div>
             <div class="section-contact-forms-2">
-                <textarea class="section-contact-forms-2-textarea" name="" id="form-text" cols="30" rows="10"
+                <textarea class="section-contact-forms-2-textarea" name="texto" id="form-text" cols="30" rows="10"
                     placeholder="Mensagem"></textarea>
 
             </div>
@@ -109,14 +109,15 @@
 
 
     <footer>
-
+            <a id="subirTopo">
+                    ^
+                  </a>
     </footer>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="assets/lib/slick/slick.js"></script>
     <script src="assets/js/jquery.validate.min.js"></script>
-    <script src="assets/js/localization/messages_pt_BR.js"></script>
     <script>
         $(document).ready(function () {
             $('.carousel').slick({
@@ -149,15 +150,81 @@
 
     <script type="text/javascript">
       $(document).ready(function () {
+
+        $("#form").submit(function(e){
+            return false;
+        })
           $("#form").validate({
               rules : {
                 email : {
-                    require: true,
+                    required: true,
                     email: true
+                },
+                nome : {
+                    required: true,
+                },
+                texto : {
+                    required: true,
                 }
-              }
+
+              },
+              submitHandler: function (form) {
+                alert("deu certo!");
+                form.submit();
+}
+
+
+              
           })
-      }
+      });
+    </script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+          $("#form").validate({
+              rules : {
+                email : {
+                    required: true,
+                    email: true
+                },
+                nome : {
+                    required: true,
+                    maxlenght: 100,
+                    minlenght: 10,
+                },
+                texto : {
+                    required: true,
+                }
+
+              },
+              submitHandler: function(form){
+                  alert("sucesso")
+              }
+              
+          })
+      });
+    </script>
+
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+    
+    jQuery("#subirTopo").hide();
+    
+    jQuery('a#subirTopo').click(function () {
+             jQuery('body,html').animate({
+               scrollTop: 0
+             }, 200);
+            return false;
+       });
+    
+    jQuery(window).scroll(function () {
+             if (jQuery(this).scrollTop() > 10) {
+                jQuery('#subirTopo').fadeIn();
+             } else {
+                jQuery('#subirTopo').fadeOut();
+             }
+         });
+    });
     </script>
 
 </body>
