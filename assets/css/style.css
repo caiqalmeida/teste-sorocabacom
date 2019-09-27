@@ -2,18 +2,28 @@
 
 * {
     box-sizing: border-box;
-  }
+    outline: 0;
+}
 
 
-html, h1, h2, h3, h4, h5, h6, p, div, section, header, footer {
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+section,
+header,
+footer {
     font-family: 'Open Sans', sans-serif;
     padding: 0;
     margin: 0;
 }
 
-img {
-    
-}
+img {}
 
 
 html {
@@ -59,13 +69,14 @@ html {
 }
 
 .section-intro-card {
-    background-color: rgba(255,255,255,.3);
+    background-color: rgba(255, 255, 255, .3);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: 586px;
+    width: 55%;
+    max-width: 586px; 
 }
 
 .section-intro-card-title {
@@ -80,6 +91,8 @@ html {
 }
 
 .section-intro-card-image {
+    width: 89.76%;
+    height: 69,81%;
     max-width: 526px;
     max-height: 754px;
 }
@@ -98,28 +111,42 @@ html {
 
 .section-carousel {
     height: 100vh;
-    width: 100%;
+    /* width: 100%; */
+    width: 100vw !important;
+    padding: 80px 0;
     background-color: #19232D;
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
+    /* display: flex !important; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.section-carousel .slick-list {
+    padding: 0 !important;
+}
+
+.section-carousel .carousel {
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel .slick-slide {
+    margin: 0 10px;
 }
 
 .card {
-    width: 20%;
-    height: 60%;
-    background: rgba(255,255,255,1);
+    /* width: 20%; */
+    /* height: 60%; */
+    /* display: flex;  */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    background: rgba(255, 255, 255, 1);
     border-radius: 27px;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 6rem 0;
 }
 
-.card-middle {
-    margin-left: 6rem;
-    margin-right: 6rem;
-}
 
 .card-img {
     height: 80%;
@@ -149,8 +176,8 @@ html {
 
 .section-contact-container {
     background-color: white;
-    width: 1082px;
-    height: 832.5px;
+    width: 55.76%;
+    height: 123%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -211,11 +238,26 @@ footer {
     background-color: #19232D;
 }
 
-@media (min-width: 320px) and (max-width: 640px) {
 
+
+@media (max-width: 1230px) {
+    .carousel, .slick-slider {
+        width: 70% !important;
+    }
+
+    .card {
+        width: 70%;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .card-text {
+        font-size: 1rem;
+    }
 }
 
-@media (min-width: 320px) and (max-width: 640px) {
+@media (min-width: 320px) and (max-width: 1024px) {
     html {
         font-size: 1rem;
     }
@@ -223,18 +265,29 @@ footer {
     img {
         max-width: 100%;
     }
-    
-    .section-intro-card-image{
-        max-width: 80%;
-    } 
 
-    .section-intro-card-title, .section-intro-card-text {
-        font-size: 1rem;
+    .section-intro-card {
+        width: 100%;
+    }
+
+    .section-intro-card-image {
+        max-width: 80%;
+    }
+
+    .section-intro-card-title,
+    .section-intro-card-text {
+        font-size: 1.5rem;
         width: 90%;
         max-width: 100%;
     }
 
-    .section-contact, .section-contact-container, .section-carousel ,.section-contact-text, .section-contact-forms-1 input, .section-contact-forms-2-textarea, .section-contact-forms-3, .section-contact-button {
+    .section-contact,
+    .section-contact-container,
+    .section-contact-text,
+    .section-contact-forms-1 input,
+    .section-contact-forms-2-textarea,
+    .section-contact-forms-3,
+    .section-contact-button {
         max-width: 100%;
         width: 100%;
         height: 100%;
@@ -242,17 +295,68 @@ footer {
     }
 
     .section-carousel {
+        padding: 20% 0;
+    }
+
+    .section-contact-forms-1 {
         flex-direction: column;
     }
 
-    .card {
-        width: 100%;
-        margin-top: 10rem;
+    .section-contact-forms-1-email {
+        margin-top: 2rem;
     }
 
-    .card-img {
-        max-width: 70%;
-        max-height: 70%;
+
+}
+
+@media (min-width: 800px) and (max-width: 900px) {
+    
+    .section-carousel {
+        padding: 4rem 0;
     }
 
+
+    .card-text {
+        font-size: 1.8rem;
+    }
+
+
+}
+
+@media (min-width: 560px) and (max-width: 799px) {
+    .card-text {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (min-width: 430px) and (max-width: 559px) {
+    .card-text {
+        font-size: 1rem;
+    }
+
+    .section-carousel {
+        padding: 40% 0;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 429px) {
+    .card-text {
+        font-size: 0.8rem;
+    }
+
+    .section-carousel {
+        padding: 60% 0;
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 359px) {
+    .card-text {
+        font-size: 0.65rem;
+    }
+
+    .section-carousel {
+        padding: 70% 0;
+    }
 }
