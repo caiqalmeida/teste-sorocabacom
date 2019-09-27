@@ -5,6 +5,9 @@
     outline: 0;
 }
 
+body, html { 
+    overflow-x: hidden;
+ }
 
 html,
 h1,
@@ -22,9 +25,6 @@ footer {
     padding: 0;
     margin: 0;
 }
-
-img {}
-
 
 html {
     scroll-behavior: smooth;
@@ -96,6 +96,7 @@ html {
     height: 69,81%;
     max-width: 526px;
     max-height: 754px;
+    border-radius: 30%;
 }
 
 .section-intro-card-text {
@@ -265,7 +266,7 @@ footer {
     opacity:1;
     }
 
-    #form-email-error, #form-name-error {
+    #form-email-error, #form-name-error, #form-text-error {
         display: none !important;
     }
 
@@ -387,5 +388,11 @@ footer {
 
     .section-carousel {
         padding: 70% 0;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1160px) {
+    .section-contact-text {
+        font-size: 1rem;
     }
 }
